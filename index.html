@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OpenVole — the self-hosted agent OS</title>
-<meta name="description" content="Run a fleet of AI agents on your own hardware, against any model, from one dashboard. Peer-to-peer networked. Nothing phones home.">
+<meta name="description" content="Run a fleet of AI agents on your own hardware, against any model, from one dashboard — then link them across machines into a distributed VoleNet mesh of nodes that share tools, memory, and brains.">
 <meta property="og:title" content="OpenVole — the self-hosted agent OS">
-<meta property="og:description" content="Run a fleet of AI agents on your own hardware, against any model, from one dashboard. Peer-to-peer networked. Nothing phones home.">
+<meta property="og:description" content="Run a fleet of AI agents on your own hardware, against any model, from one dashboard — then link them across machines into a distributed VoleNet mesh of nodes that share tools, memory, and brains.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://openvole.github.io/vole.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -50,14 +50,15 @@
     <img src="vole.png" alt="OpenVole">
     <h1>OpenVole</h1>
     <p class="tagline">The self-hosted agent OS — run a fleet of AI agents on your own hardware,
-    against any model, from one dashboard. Peer-to-peer networked. Nothing phones home.</p>
+    against any model, from one dashboard. Then link them across machines into a distributed
+    VoleNet mesh — nodes that share tools, memory, and brains.</p>
     <div class="cta">
       <a class="btn primary" href="https://openvole.github.io/openvole/getting-started">Get started</a>
       <a class="btn" href="https://openvole.github.io/openvole/">Docs</a>
       <a class="btn" href="https://github.com/openvole/openvole">GitHub</a>
       <a class="btn" href="https://www.npmjs.com/package/openvole">npm</a>
     </div>
-    <div class="install"><code>npx vole serve</code></div>
+    <div class="install"><code>vole serve</code></div>
   </header>
 
   <img class="shot" src="dashboard.png" alt="The OpenVole control plane managing a running space">
@@ -68,12 +69,14 @@
     <div class="feat"><h3>🔌 Model-agnostic</h3><p>One brain paw for Anthropic, OpenAI, Gemini, xAI, and Ollama. Switch per agent with one env var.</p></div>
     <div class="feat"><h3>🖥️ A server, not a script</h3><p><code>vole serve</code> is a control plane — create, run, and chat with a whole fleet of agents from one dashboard.</p></div>
     <div class="feat"><h3>🕸️ VoleNet</h3><p>A peer-to-peer agent mesh — remote tools become local, workers share one brain, memory syncs. No central server.</p></div>
+    <div class="feat"><h3>🔐 Sandboxed &amp; signed</h3><p>Every paw runs in a locked-down subprocess with explicit permissions. Every VoleNet action is cryptographically signed and authorized before it runs — nothing executes on trust alone.</p></div>
+    <div class="feat"><h3>🛡️ Post-quantum ready</h3><p>Mesh identities are signed with hybrid Ed25519 + ML-DSA-65 (FIPS 204), so your agent network stays verifiable even against tomorrow's quantum attacks.</p></div>
     <div class="feat"><h3>🧩 Microkernel, zero lock-in</h3><p>A tiny, LLM-ignorant core. Every capability is a Paw you can swap, sandbox, or write yourself.</p></div>
     <div class="feat"><h3>🪟 An app platform</h3><p>A Paw can ship its own UI, rendered under the dashboard's Apps tab — extend it into a full app.</p></div>
   </section>
 
   <footer>
-    Open source, MIT. · <a href="https://github.com/openvole/openvole">github.com/openvole/openvole</a>
+    🐹 built by <a href="https://shyble.github.io">Kürşat Kutlu Aydemir</a>
   </footer>
 </div>
 </body>
