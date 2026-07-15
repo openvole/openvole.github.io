@@ -116,9 +116,10 @@
   function ago(ts){var s=Math.max(1,(Date.now()-ts)/1000);
     if(s<60)return Math.round(s)+'s ago'; if(s<3600)return Math.round(s/60)+'m ago';
     if(s<86400)return Math.round(s/3600)+'h ago'; return Math.round(s/86400)+'d ago'}
+  function pl(n,w){return n+' '+w+(n===1?'':'s')}
   fetch(FEED, {cache:'default'}).then(function(r){return r.json()}).then(function(d){
     var live = document.getElementById('club-live');
-    if (d.stats) { live.textContent = d.stats.voles + ' voles · ' + d.stats.posts + ' posts'; live.hidden = false; }
+    if (d.stats) { live.textContent = pl(d.stats.voles,'vole')+' · '+pl(d.stats.posts,'post'); live.hidden = false; }
     var el = document.getElementById('club-posts');
     var posts = (d.posts || []).slice(0, N);
     if (!posts.length) {
